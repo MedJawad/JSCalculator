@@ -3,75 +3,12 @@
 <head>
 	<title>Calque et La triste</title>
 	<link rel="stylesheet" href="C:\Bootstrap\css\bootstrap.min.css">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
       <script src="C:\Bootstrap\js\bootstrap.min.js" ></script>
-      <style type="text/css">
-      	.table{
-      		text-align: center;
-      	}
-      	.btn{width: 100%;}
-      	#Screen{height: 200px;font-size: x-large;padding-top: 100px;}
-      </style>
-      <script type="text/javascript">
-      	document.addEventListener('keydown',ev )
-      	function ev(event) {
-   						document.getElementById(event.keyCode).click();
-					}
-      	function add(butt){
-      		document.getElementById('Screen').innerHTML+=butt;
-      	}
-      	function del(){
-      		var a = document.getElementById('Screen').innerHTML;
-      		document.getElementById('Screen').innerHTML = a.slice(0,-1);
-      	}
-      	//khass ay operation dghet thssb dakchy li daz o t7tou 3ad nkml deuxieme champs dyal num
-      	//donc khass had la fct t3ref ach mn operation mktouba ( atkoun gha 1operation) o thssb dakchi o tktbou ! o aytdar appel l had la fct f kola operation jdida ola f =
-      	function doublecheck(){
-      		l=document.getElementById('Screen').innerHTML.slice(-1);
-      		if (l.includes("x")||l.includes("/")) {del();}
-      		else check();
-      	}
-      	function check(){
-       		if(document.getElementById('Screen').innerHTML.includes("!")){clr();}
-      		else if(document.getElementById('Screen').innerHTML.includes("+")){plus();}
-      		else if(document.getElementById('Screen').innerHTML.includes("x")){fois();}
-      		else if(document.getElementById('Screen').innerHTML.includes("/")){div();}
-      		else if(document.getElementById('Screen').innerHTML.includes("-")){moins();}
-
-      	}
-      	function plus(){
-      		var i = document.getElementById('Screen').innerHTML.indexOf("+");
-      		var a = document.getElementById('Screen').innerHTML.slice(0, i);
-      		var b = document.getElementById('Screen').innerHTML.slice(i+1);
-			document.getElementById('Screen').innerHTML = Number(a)+Number(b);
-      	}
-      	function moins(){
-      		var i = document.getElementById('Screen').innerHTML.indexOf("-",1);
-      		var a = document.getElementById('Screen').innerHTML.slice(0, i);
-      		var b = document.getElementById('Screen').innerHTML.slice(i+1);
-			document.getElementById('Screen').innerHTML = Number(a)-Number(b);
-      	}
-      	function fois(){
-      		var i = document.getElementById('Screen').innerHTML.indexOf("x");
-      		var a = document.getElementById('Screen').innerHTML.slice(0, i);
-      		var b = document.getElementById('Screen').innerHTML.slice(i+1);
-      		document.getElementById('Screen').innerHTML = Number(a)*Number(b);
-      	}
-      	function div(){
-      		var i = document.getElementById('Screen').innerHTML.indexOf("/");
-      		var a = document.getElementById('Screen').innerHTML.slice(0, i);
-      		var b = document.getElementById('Screen').innerHTML.slice(i+1);
-      		if(b!=null){
-      		if (b!=0) {	document.getElementById('Screen').innerHTML = Number(a)/Number(b);}
-      		else document.getElementById('Screen').innerHTML = "DIVISION PAR 0 ! ";
-      	}
-      	}
-      	function clr(){
-      		document.getElementById('Screen').innerHTML=null;
-      	}
-      </script>
+      <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 	<div class="container">
